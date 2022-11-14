@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.touches.Length>0 && Input.touches[0].phase == TouchPhase.Began)
+        if(Input.touches.Length>0 && Input.touches[0].phase == TouchPhase.Began || Input.GetMouseButtonDown(0))
         {
             _targetPoints.Enqueue(_playerCamera.ScreenToWorldPoint(Input.mousePosition));
            
